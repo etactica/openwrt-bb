@@ -1,0 +1,74 @@
+--- a/arch/mips/ar231x/ar2315.c
++++ b/arch/mips/ar231x/ar2315.c
+@@ -361,9 +361,22 @@ static u8 __init *ar2315_flash_limit(voi
+ 	return (u8 *)KSEG1ADDR(ar2315_spiflash_res[0].end + 1);
+ }
+ 
+-#ifdef CONFIG_LEDS_GPIO
+-static struct gpio_led ar2315_leds[6];
++static struct gpio_led ar2315_leds[2] = {
++	{
++		.name = "wlan",
++		.gpio = 7,
++		.active_low = 0
++	},
++
++	{
++		.name = "globe",
++		.gpio = 5,
++		.active_low = 1
++	}
++};
++
+ static struct gpio_led_platform_data ar2315_led_data = {
++	.num_leds = 2,
+ 	.leds = (void *)ar2315_leds,
+ };
+ 
+@@ -375,37 +388,6 @@ static struct platform_device ar2315_gpi
+ 	}
+ };
+ 
+-static void __init
+-ar2315_init_gpio_leds(void)
+-{
+-	static char led_names[6][6];
+-	int i, led = 0;
+-
+-	ar2315_led_data.num_leds = 0;
+-	for (i = 1; i < 8; i++) {
+-		if ((i == AR2315_RESET_GPIO) ||
+-		    (i == ar231x_board.config->reset_config_gpio))
+-			continue;
+-
+-		if (i == ar231x_board.config->sys_led_gpio)
+-			strcpy(led_names[led], "wlan");
+-		else
+-			sprintf(led_names[led], "gpio%d", i);
+-
+-		ar2315_leds[led].name = led_names[led];
+-		ar2315_leds[led].gpio = i;
+-		ar2315_leds[led].active_low = 0;
+-		led++;
+-	}
+-	ar2315_led_data.num_leds = led;
+-	platform_device_register(&ar2315_gpio_leds);
+-}
+-#else
+-static inline void ar2315_init_gpio_leds(void)
+-{
+-}
+-#endif
+-
+ int __init
+ ar2315_init_devices(void)
+ {
+@@ -416,7 +398,7 @@ ar2315_init_devices(void)
+ 	ar231x_find_config(ar2315_flash_limit());
+ 	ar2315_eth_data.macaddr = ar231x_board.config->enet0_mac;
+ 
+-	ar2315_init_gpio_leds();
++	platform_device_register(&ar2315_gpio_leds);
+ 	platform_device_register(&ar2315_wdt);
+ 	platform_device_register(&ar2315_spiflash);
+ 	ar231x_add_ethernet(0, AR2315_ENET0, "eth0_mii", AR2315_ENET0_MII,
