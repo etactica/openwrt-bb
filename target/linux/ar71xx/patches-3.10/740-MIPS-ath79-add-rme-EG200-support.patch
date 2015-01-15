@@ -1,0 +1,39 @@
+--- a/arch/mips/ath79/Kconfig
++++ b/arch/mips/ath79/Kconfig
+@@ -644,6 +644,16 @@ config ATH79_MACH_RW2458N
+ 	select ATH79_DEV_M25P80
+ 	select ATH79_DEV_USB
+ 
++config ATH79_MACH_RME_EG200
++	bool "ReMake Electric EG200 board support"
++	select SOC_AR933X
++	select ATH79_DEV_ETH
++	select ATH79_DEV_GPIO_BUTTONS
++	select ATH79_DEV_LEDS_GPIO
++	select ATH79_DEV_M25P80
++	select ATH79_DEV_USB
++	select ATH79_DEV_WMAC
++
+ config ATH79_MACH_CAP4200AG
+ 	bool "Senao CAP4200AG support"
+ 	select SOC_AR934X
+--- a/arch/mips/ath79/Makefile
++++ b/arch/mips/ath79/Makefile
+@@ -91,6 +91,7 @@ obj-$(CONFIG_ATH79_MACH_RB91X)		+= mach-
+ obj-$(CONFIG_ATH79_MACH_RB95X)		+= mach-rb95x.o
+ obj-$(CONFIG_ATH79_MACH_RB2011)		+= mach-rb2011.o
+ obj-$(CONFIG_ATH79_MACH_RBSXTLITE)	+= mach-rbsxtlite.o
++obj-$(CONFIG_ATH79_MACH_RME_EG200)	+= mach-rme-eg200.o
+ obj-$(CONFIG_ATH79_MACH_RW2458N)	+= mach-rw2458n.o
+ obj-$(CONFIG_ATH79_MACH_SMART_300)	+= mach-smart-300.o
+ obj-$(CONFIG_ATH79_MACH_TEW_632BRP)	+= mach-tew-632brp.o
+--- a/arch/mips/ath79/machtypes.h
++++ b/arch/mips/ath79/machtypes.h
+@@ -102,6 +102,7 @@ enum ath79_mach_type {
+ 	ATH79_MACH_RB_2011R5,		/* Mikrotik RouterBOARD 2011UiAS(-2Hnd) */
+ 	ATH79_MACH_RB_SXTLITE2ND,	/* Mikrotik RouterBOARD SXT Lite 2nD */
+ 	ATH79_MACH_RB_SXTLITE5ND,	/* Mikrotik RouterBOARD SXT Lite 5nD */
++	ATH79_MACH_RME_EG200,		/* ReMake Electric EG200 */
+ 	ATH79_MACH_RW2458N,		/* Redwave RW2458N */
+ 	ATH79_MACH_SMART_300,		/* NC-LINK SMART-300 */
+ 	ATH79_MACH_TEW_632BRP,		/* TRENDnet TEW-632BRP */

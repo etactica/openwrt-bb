@@ -517,6 +517,9 @@ ar71xx_board_detect() {
 	*"RouterStation Pro")
 		name="routerstation-pro"
 		;;
+	*"ReMake Electric EG200")
+		name="rme-eg200"
+		;;
 	*RW2458N)
 		name="rw2458n"
 		;;
