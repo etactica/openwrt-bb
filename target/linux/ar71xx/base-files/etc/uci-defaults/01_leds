@@ -197,6 +197,12 @@ om5p)
 	ucidef_set_led_netdev "port2" "port2" "om5p:blue:lan" "eth1"
 	;;
 
+rme-eg200)
+	ucidef_set_led_netdev "wan" "WAN" "eg200:green:eth0" "eth0"
+	ucidef_set_led_wlan "wlan" "WLAN" "eg200:green:wlan" "phy0tpt"
+	ucidef_set_led_usbdev "usb" "USB" "eg200:green:modbus" "1-1"
+	;;
+
 smart-300)
 	ucidef_set_led_netdev "wan" "WAN" "nc-link:green:wan" "eth0"
 	ucidef_set_led_switch "lan1" "LAN1" "nc-link:green:lan1" "switch0" "0x04"

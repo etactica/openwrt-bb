@@ -1081,6 +1081,7 @@ $(eval $(call SingleProfile,AthLzma,64k,EWDORINRT,ew-dorin-router,EW-DORIN-ROUTE
 $(eval $(call SingleProfile,AthLzma,64k,EWDORIN16M,ew-dorin-16M,EW-DORIN,ttyATH0,115200,$$(ew-dorin_mtdlayout_16M),KRuImage,65536))
 $(eval $(call SingleProfile,AthLzma,64k,HORNETUBx2,hornet-ub-x2,HORNET-UB,ttyATH0,115200,$$(alfa_mtdlayout_16M),KRuImage,65536))
 $(eval $(call SingleProfile,AthLzma,64k,PB92,pb92,PB92,ttyS0,115200,$$(pb92_mtdlayout),KRuImage))
+$(eval $(call SingleProfile,AthLzma,64k,RME_EG200,rme-eg200,RME-EG200,ttyATH0,115200,$$(carambola2_mtdlayout_16M),KRuImage,65536))
 $(eval $(call SingleProfile,AthLzma,64k,TUBE2H16M,tube2h-16M,TUBE2H,ttyATH0,115200,$$(alfa_mtdlayout_16M),KRuImage,65536))
 $(eval $(call SingleProfile,AthLzma,64k,WLR8100,wlr8100,WLR8100,ttyS0,115200,$$(wlr8100_mtdlayout),KRuImage))
 
