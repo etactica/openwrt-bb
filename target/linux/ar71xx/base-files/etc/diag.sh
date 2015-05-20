@@ -162,8 +162,8 @@ get_status_led() {
 		;;
 # KARL - what is this "status" led even used for? blinking fast in init?
 # yes, so what do you want to use?
-	#rme-eg200)
-	#	status_led="eg200:green:etactica"
+	#rme-eg190)
+	#	status_led="eg190:green:etactica"
 	#	;;
 	rw2458n)
 		status_led="rw2458n:green:d3"

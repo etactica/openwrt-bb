@@ -193,7 +193,7 @@ platform_check_image() {
 	nanostation-m | \
 	rocket-m | \
 	nanostation-m-xw | \
-	rme-eg200 | \
+	rme-eg190 | \
 	rw2458n | \
 	wndap360 | \
 	wzr-hp-g300nh2 | \

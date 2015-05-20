@@ -5,13 +5,13 @@
 # See /LICENSE for more information.
 #
 
-define Profile/RME_EG200
-        NAME:=ReMake Electric EG200
+define Profile/RME_EG190
+        NAME:=ReMake Electric EG190
         PACKAGES:=kmod-usb-core kmod-usb2 kmod-ledtrig-usbdev
 endef
 
-define Profile/RME_EG200/description
-        Package set optimized for the ReMake Electric EG200
+define Profile/RME_EG190/description
+        Package set optimized for the ReMake Electric EG190
 endef
 
-$(eval $(call Profile,RME_EG200))
+$(eval $(call Profile,RME_EG190))

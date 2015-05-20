@@ -4,8 +4,8 @@
  	select ATH79_DEV_M25P80
  	select ATH79_DEV_USB
  
-+config ATH79_MACH_RME_EG200
-+	bool "ReMake Electric EG200 board support"
++config ATH79_MACH_RME_EG190
++	bool "ReMake Electric EG190 board support"
 +	select SOC_AR933X
 +	select ATH79_DEV_ETH
 +	select ATH79_DEV_GPIO_BUTTONS
@@ -23,7 +23,7 @@
  obj-$(CONFIG_ATH79_MACH_RB95X)		+= mach-rb95x.o
  obj-$(CONFIG_ATH79_MACH_RB2011)		+= mach-rb2011.o
  obj-$(CONFIG_ATH79_MACH_RBSXTLITE)	+= mach-rbsxtlite.o
-+obj-$(CONFIG_ATH79_MACH_RME_EG200)	+= mach-rme-eg200.o
++obj-$(CONFIG_ATH79_MACH_RME_EG190)	+= mach-rme-eg190.o
  obj-$(CONFIG_ATH79_MACH_RW2458N)	+= mach-rw2458n.o
  obj-$(CONFIG_ATH79_MACH_SMART_300)	+= mach-smart-300.o
  obj-$(CONFIG_ATH79_MACH_TEW_632BRP)	+= mach-tew-632brp.o
@@ -33,7 +33,7 @@
  	ATH79_MACH_RB_2011R5,		/* Mikrotik RouterBOARD 2011UiAS(-2Hnd) */
  	ATH79_MACH_RB_SXTLITE2ND,	/* Mikrotik RouterBOARD SXT Lite 2nD */
  	ATH79_MACH_RB_SXTLITE5ND,	/* Mikrotik RouterBOARD SXT Lite 5nD */
-+	ATH79_MACH_RME_EG200,		/* ReMake Electric EG200 */
++	ATH79_MACH_RME_EG190,		/* ReMake Electric EG190 */
  	ATH79_MACH_RW2458N,		/* Redwave RW2458N */
  	ATH79_MACH_SMART_300,		/* NC-LINK SMART-300 */
  	ATH79_MACH_TEW_632BRP,		/* TRENDnet TEW-632BRP */
