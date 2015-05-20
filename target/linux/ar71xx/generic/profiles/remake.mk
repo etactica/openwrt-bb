@@ -16,3 +16,18 @@ define Profile/RME_EG190/description
 endef
 
 $(eval $(call Profile,RME_EG190))
+
+define Profile/RME_EG200
+	NAME:=ReMake Electric EG200
+	PACKAGES:=kmod-usb-core kmod-usb2 kmod-ledtrig-usbdev \
+		kmod-usb-serial kmod-usb-serial-ftdi \
+		kmod-usb-storage kmod-usb-storage-extras \
+		kmod-fs-vfat kmod-fs-msdos \
+		kmod-nls-cp437 kmod-nls-utf8 \
+		kmod-nls-iso8859-1 kmod-nls-iso8859-15
+endef
+
+define Profile/RME_EG200/description
+	Package set optimized for the ReMake Electric EG200
+endef
+$(eval $(call Profile,RME_EG200))

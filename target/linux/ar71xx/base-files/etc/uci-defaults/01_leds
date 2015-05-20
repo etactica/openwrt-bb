@@ -204,6 +204,13 @@ rme-eg190)
 	ucidef_set_led_none "etactica" "etactica" "eg190:green:etactica"
 	;;
 
+rme-eg200)
+	ucidef_set_led_netdev "lan" "lan" "eg200:red:eth0" "eth0"
+	ucidef_set_led_wlan "wlan" "WLAN" "eg200:red:wlan" "phy0tpt"
+	ucidef_set_led_usbdev "modbus" "Modbus" "eg200:red:modbus" "1-1.3"
+	ucidef_set_led_none "etactica" "etactica" "eg200:red:etactica"
+	;;
+
 smart-300)
 	ucidef_set_led_netdev "wan" "WAN" "nc-link:green:wan" "eth0"
 	ucidef_set_led_switch "lan1" "LAN1" "nc-link:green:lan1" "switch0" "0x04"
