@@ -7,7 +7,8 @@
 
 define Profile/RME_EG190
         NAME:=ReMake Electric EG190
-        PACKAGES:=kmod-usb-core kmod-usb2 kmod-ledtrig-usbdev
+        PACKAGES:=kmod-usb-core kmod-usb2 kmod-ledtrig-usbdev \
+		kmod-usb-serial kmod-usb-serial-cp210x
 endef
 
 define Profile/RME_EG190/description
