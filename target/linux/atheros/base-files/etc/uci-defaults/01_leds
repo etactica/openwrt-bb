@@ -5,6 +5,7 @@
 . /lib/functions/uci-defaults.sh
 
 ucidef_set_led_netdev "wlan" "wlan" "wlan" "wlan0"
+ucidef_set_led_none "etactica" "etactica" "globe"
 
 ucidef_commit_leds
 
