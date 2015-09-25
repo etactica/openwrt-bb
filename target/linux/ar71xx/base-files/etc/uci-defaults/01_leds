@@ -200,7 +200,8 @@ om5p)
 rme-eg190)
 	ucidef_set_led_netdev "wan" "WAN" "eg190:green:eth0" "eth0"
 	ucidef_set_led_wlan "wlan" "WLAN" "eg190:green:wlan" "phy0tpt"
-	ucidef_set_led_usbdev "usb" "USB" "eg190:green:modbus" "1-1"
+	ucidef_set_led_usbdev "modbus" "Modbus" "eg190:green:modbus" "1-1"
+	ucidef_set_led_none "etactica" "etactica" "eg190:green:etactica"
 	;;
 
 smart-300)
