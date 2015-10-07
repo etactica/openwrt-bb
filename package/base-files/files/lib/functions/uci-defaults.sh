@@ -94,6 +94,22 @@ EOF
 	UCIDEF_LEDS_CHANGED=1
 }
 
+# Registers the sysfs<->name mapping in UCI only
+ucidef_set_led_none() {
+        local cfg="led_$1"
+        local name=$2
+        local sysfs=$3
+
+        uci -q get system.$cfg && return 0
+
+        uci batch <<EOF
+set system.$cfg='led'
+set system.$cfg.name='$name'
+set system.$cfg.sysfs='$sysfs'
+EOF
+        UCIDEF_LEDS_CHANGED=1
+}
+
 ucidef_set_led_rssi() {
 	local cfg="led_$1"
 	local name=$2
