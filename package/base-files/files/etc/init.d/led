@@ -49,7 +49,7 @@ load_led() {
 			}
 			;;
 
-		"timer")
+		"timer"|"oneshot")
 			[ -n "$delayon" ] && \
 				echo $delayon > /sys/class/leds/${sysfs}/delay_on
 			[ -n "$delayoff" ] && \

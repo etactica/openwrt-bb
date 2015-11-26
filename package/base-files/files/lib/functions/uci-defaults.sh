@@ -110,6 +110,36 @@ EOF
         UCIDEF_LEDS_CHANGED=1
 }
 
+# Shared by "timer" and "oneshot" triggers
+__ucidef_set_led_timer_oneshot() {
+	local cfg="led_$1"
+	local name=$2
+	local sysfs=$3
+	local trigger=$4
+	local delayon=$5
+	local delayoff=$6
+
+	uci -q get system.$cfg && return 0
+
+	uci batch <<EOF
+set system.$cfg='led'
+set system.$cfg.name='$name'
+set system.$cfg.sysfs='$sysfs'
+set system.$cfg.trigger='$trigger'
+set system.$cfg.delayon='$delayon'
+set system.$cfg.delayoff='$delayoff'
+EOF
+	UCIDEF_LEDS_CHANGED=1
+}
+
+ucidef_set_led_oneshot() {
+	__ucidef_set_led_timer_oneshot $1 $2 $3 "oneshot" $4 $5
+}
+
+ucidef_set_led_timer() {
+	__ucidef_set_led_timer_oneshot $1 $2 $3 "timer" $4 $5
+}
+
 ucidef_set_led_rssi() {
 	local cfg="led_$1"
 	local name=$2
