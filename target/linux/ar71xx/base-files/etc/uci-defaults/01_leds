@@ -207,7 +207,7 @@ rme-eg190)
 rme-eg200)
 	ucidef_set_led_netdev "lan" "lan" "eg200:red:eth0" "eth0"
 	ucidef_set_led_wlan "wlan" "WLAN" "eg200:red:wlan" "phy0tpt"
-	ucidef_set_led_usbdev "modbus" "Modbus" "eg200:red:modbus" "1-1.3"
+	ucidef_set_led_oneshot "modbus" "Modbus" "eg200:red:modbus" "100" "33"
 	ucidef_set_led_none "etactica" "etactica" "eg200:red:etactica"
 	;;
 
