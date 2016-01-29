@@ -6,19 +6,19 @@
 #
 
 define Profile/RME_EG190
-        NAME:=ReMake Electric EG190
+        NAME:=eTactica Electric EG-190
         PACKAGES:=kmod-usb-core kmod-usb2 kmod-ledtrig-usbdev \
 		kmod-usb-serial kmod-usb-serial-cp210x
 endef
 
 define Profile/RME_EG190/description
-        Package set optimized for the ReMake Electric EG190
+        Package set optimized for the eTactica EG-190
 endef
 
 $(eval $(call Profile,RME_EG190))
 
 define Profile/RME_EG200
-	NAME:=ReMake Electric EG200
+	NAME:=eTactica EG-200
 	PACKAGES:=kmod-usb-core kmod-usb2 \
 		kmod-ledtrig-oneshot kmod-ledtrig-usbdev \
 		kmod-usb-serial kmod-usb-serial-ftdi \
@@ -29,6 +29,6 @@ define Profile/RME_EG200
 endef
 
 define Profile/RME_EG200/description
-	Package set optimized for the ReMake Electric EG200
+	Package set optimized for the eTactica EG-200
 endef
 $(eval $(call Profile,RME_EG200))

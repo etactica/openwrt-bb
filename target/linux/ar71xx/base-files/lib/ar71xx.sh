@@ -334,6 +334,12 @@ ar71xx_board_detect() {
 	*EL-MINI)
 		name="el-mini"
 		;;
+	*"eTactica EG-190")
+		name="rme-eg190"
+		;;
+	*"eTactica EG-200")
+		name="rme-eg200"
+		;;
 	*"GL-CONNECT INET v1")
 		name="gl-inet"
 		;;
@@ -516,12 +522,6 @@ ar71xx_board_detect() {
 		;;
 	*"RouterStation Pro")
 		name="routerstation-pro"
-		;;
-	*"ReMake Electric EG190")
-		name="rme-eg190"
-		;;
-	*"ReMake Electric EG200")
-		name="rme-eg200"
 		;;
 	*RW2458N)
 		name="rw2458n"

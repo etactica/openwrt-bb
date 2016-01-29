@@ -149,5 +149,5 @@ static void __init rme_eg190_setup(void)
 	ath79_register_usb();
 }
 
-MIPS_MACHINE(ATH79_MACH_RME_EG190, "RME-EG190", "ReMake Electric EG190",
+MIPS_MACHINE(ATH79_MACH_RME_EG190, "RME-EG190", "eTactica EG-190",
 		rme_eg190_setup);
